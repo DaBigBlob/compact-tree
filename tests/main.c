@@ -1,4 +1,4 @@
-#include "../lib/tree.c"
+#include "../lib/api.h"
 #include <stdio.h>
 #include <stdlib.h>
 
