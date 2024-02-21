@@ -9,6 +9,6 @@ typedef int_fast8_t chunk_t;
 
 #define _spec_NULL NULL
 
-typedef chunk_t chunk_num_t ;
+typedef chunk_t chunk_num_t;
 
 #endif // _SPEC_
