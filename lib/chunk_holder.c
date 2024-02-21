@@ -1,10 +1,16 @@
-#ifndef _GEN_TREE_
-#define _GEN_TREE_ "0.1"
+#ifndef _CHUNK_HOLDER_
+#define _CHUNK_HOLDER_ "0.1"
 
-#include "../spec.h"
-#include "tree.h"
+#include "spec.h"
 #ifdef _SPEC_
-#ifdef _TREE_H_
+
+struct chunk_holder_st {
+    struct chunk_holder_st* parent;
+    chunk_t chunk;
+    struct chunk_holder_st* * children;
+} chunk_holder_st;
+
+typedef struct chunk_holder_st chunk_holder_t;
 
 chunk_holder_t* new_chunk_holder(chunk_holder_t* parent, chunk_t chunk) {
     chunk_holder_t* ch = _spec_malloc(sizeof(chunk_holder_t));
@@ -60,6 +66,5 @@ chunk_holder_t* * add_chunk_to_children(
     );
 }
 
-#endif // _TREE_H_
 #endif // _SPEC_
-#endif // _GEN_TREE_
+#endif // _CHUNK_HOLDER_
