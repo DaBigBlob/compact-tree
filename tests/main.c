@@ -5,6 +5,6 @@
 int main() {
     chunk_holder_t *ch = new_chunk_holder(NULL, 100);
     printf("%d\n", ch->chunk);
-
+    free(ch);
     return 0;
 }
