@@ -53,6 +53,8 @@ chunk_holder_t* * add_chunk_holder_to_children(
             current_children++;
         }
     }
+    *itr_chc = new_child;
+    itr_chc++;
     *itr_chc = _spec_NULL;
 
     return chc;
