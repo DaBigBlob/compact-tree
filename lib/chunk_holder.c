@@ -20,6 +20,10 @@ chunk_holder_t* new_chunk_holder(chunk_holder_t* parent, chunk_t chunk) {
     return ch;
 }
 
+chunk_holder_t* new_end_holder() {
+    return new_chunk_holder(_spec_NULL, 0);
+}
+
 chunk_num_t chunk_holder_arr_len(chunk_holder_t** arr, chunk_num_t child_addr_size) {
     chunk_num_t n = 0;
     while (*arr != _spec_NULL) {
