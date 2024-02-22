@@ -44,8 +44,7 @@ chunk_holder_t* * add_chunk_holder_to_children(
         (child_addr_size * n) + sizeof(_spec_NULL)
     );
 
-    chunk_holder_t* * itr_chc = chc;
-    n--;
+    chunk_holder_t* * itr_chc = chc; 
     for (chunk_num_t i = 0; i < n; i++) {
         for (chunk_num_t j = 0; j < child_addr_size; i++) {
             *itr_chc = *current_children;
