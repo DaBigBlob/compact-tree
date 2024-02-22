@@ -54,7 +54,7 @@ chunk_holder_t* * add_chunk_holder_to_children(
         }
     }
     *itr_chc = new_child;
-    itr_chc++;
+    itr_chc += child_addr_size;
     *itr_chc = _spec_NULL;
 
     return chc;
